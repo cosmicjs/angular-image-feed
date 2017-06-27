@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import Cosmic from 'cosmicjs';
+import {CosmicConfigService} from '../services/cosmic_config';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,11 @@ export class AppComponent {
   bucket = { slug: 'angular-gallery' };
   items = [];
 
-  constructor() {
+  constructor(
+    public cosmicCfg: CosmicConfigService
+  ) {
     this.items = [];
-    Cosmic.getObjects({ bucket: this.bucket }, (err, res) => {
+    Cosmic.getObjects(this.cosmicCfg.getReadCfg(), (err, res) => {
       this.items = res.objects.all;
     });
   }

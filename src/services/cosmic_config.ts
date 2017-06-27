@@ -41,4 +41,8 @@ export class CosmicConfigService {
             }]
         };
     }
+
+    getPhotoSlug() {
+        return this.photos_type;
+    }
 }

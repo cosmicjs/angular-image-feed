@@ -35,6 +35,8 @@ export class PictureUpload {
             Cosmic.addObject(this.cosmicConfig.getWriteCfg(),
                 this.cosmicConfig.buildPhotoUploadObj(this.title, response.body.media.name),
             (error, response) => {
+                this.title = '';
+                this.fl = null;
                 this.uploading = false;
                 this.onUpload.emit({});
             });

@@ -8,7 +8,7 @@ import {CosmicConfigService} from '../services/cosmic_config';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  items = [];
+  public items = [];
   page = 0;
   page_size = 2;
   scrollEnabled = true;

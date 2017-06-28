@@ -1,13 +1,20 @@
-<div class="row">
-    <div class="col-sm-4">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Title..." (input)="title = $event.target.value" [value]="title"/>
+<div>
+    <div class="row" *ngIf="!uploading">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Title..." (input)="title = $event.target.value" [value]="title"/>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <input type="file" (change)="onFileChange($event)"/>
+        </div>
+        <div class="col-sm-4">
+            <button class="btn btn-primary btn-block" (click)="upload()">Upload photo</button>
         </div>
     </div>
-    <div class="col-sm-4">
-        <input type="file" (change)="onFileChange($event)"/>
-    </div>
-    <div class="col-sm-4">
-        <button class="btn btn-primary btn-block" (click)="upload()">Upload photo</button>
+    <div *ngIf="uploading" class="text-center">
+        Upload is in progress
+        <br>
+        <br>
     </div>
 </div>

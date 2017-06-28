@@ -8,7 +8,6 @@ import {CosmicConfigService} from '../services/cosmic_config';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  bucket = { slug: 'angular-gallery' };
   items = [];
   page = 0;
   page_size = 2;
@@ -17,7 +16,13 @@ export class AppComponent {
   constructor(
     public cosmicCfg: CosmicConfigService
   ) {
+    this.reload();
+  }
+
+  reload() {
     this.items = [];
+    this.page = 0;
+    this.scrollEnabled = true;
     let params = {
       type_slug: this.cosmicCfg.getPhotoSlug(),
       limit: this.page_size,
@@ -26,6 +31,10 @@ export class AppComponent {
     Cosmic.getObjectType(this.cosmicCfg.getReadCfg(), params, (err, res) => {
       this.items = res.objects.all;
     });
+  }
+
+  onUpload() {
+    this.reload();
   }
 
   onScroll() {

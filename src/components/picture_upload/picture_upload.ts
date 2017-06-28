@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import Cosmic from 'cosmicjs';
 import { CosmicConfigService } from '../../services/cosmic_config';
 
@@ -9,10 +9,13 @@ import { CosmicConfigService } from '../../services/cosmic_config';
 export class PictureUpload {
     private fl;
     private title;
+    public uploading;
+    @Output() onUpload = new EventEmitter<any>();
 
     constructor(
         private cosmicConfig: CosmicConfigService
     ) {
+        this.uploading = false;
         this.fl = null;
         this.title = "";
     }
@@ -24,6 +27,7 @@ export class PictureUpload {
     }
 
     upload() {
+        this.uploading = true;
         Cosmic.addMedia(this.cosmicConfig.getWriteCfg(), {
             media: this.fl,
             folder: this.fl.name
@@ -31,7 +35,8 @@ export class PictureUpload {
             Cosmic.addObject(this.cosmicConfig.getWriteCfg(),
                 this.cosmicConfig.buildPhotoUploadObj(this.title, response.body.media.name),
             (error, response) => {
-                console.log(error, response);
+                this.uploading = false;
+                this.onUpload.emit({});
             });
         });
     }

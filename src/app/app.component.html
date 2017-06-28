@@ -1,7 +1,4 @@
-<div infiniteScroll
-		    [infiniteScrollDistance]="1"
-		    [infiniteScrollThrottle]="300"
-		    (scrolled)="onScroll()">
-<picture-upload></picture-upload>
+<div infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="300" (scrolled)="onScroll()">
+<picture-upload (onUpload)="onUpload($event)"></picture-upload>
 <picture *ngFor="let item of items" [picture]="item"></picture>
 </div>

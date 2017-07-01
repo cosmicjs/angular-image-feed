@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "npm install -g @angular/cli && node prepare.js && ng build --prod && node app.js"
+    "start": "node prepare.js && ./node_modules/@angular/cli/bin/ng build --prod && node app.js"
   },
   "engines": {
     "node": "6.9.4"
@@ -16,6 +16,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.0",
+    "@angular/cli": "^1.1.3",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/core": "^4.0.0",

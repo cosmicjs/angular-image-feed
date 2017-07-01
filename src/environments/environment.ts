@@ -4,5 +4,8 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  write_key: 'jaKaNJi7LXhALkjJlZa2JvuSPwdkHQbhwzbMcDzB6LHY6uZlsj',
+  bucket_name: 'angular-gallery',
+  photos_type: 'photos'
 };

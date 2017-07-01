@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {environment} from '../environments/environment';
 
 @Injectable()
 export class CosmicConfigService {
@@ -7,9 +8,9 @@ export class CosmicConfigService {
     private photos_type;
 
     constructor() {
-        this.photos_type = 'photos';
-        this.write_key = 'jaKaNJi7LXhALkjJlZa2JvuSPwdkHQbhwzbMcDzB6LHY6uZlsj';
-        this.bucket_name = 'angular-gallery';
+        this.photos_type = environment.photos_type;
+        this.write_key = environment.write_key;
+        this.bucket_name = environment.bucket_name;
     }
 
     public getReadCfg(): any {

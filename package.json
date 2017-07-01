@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "preinstall": "ng",
-    "postinstall": "rm .angular-cli.json && node ./node_modules/@angular/cli/bin/ng -v && node prepare.js  && cat ./src/environments/environment.prod.ts && node ./node_modules/@angular/cli/bin/ng build --prod",
+    "postinstall": "rm .angular-cli.json && node prepare.js  && cat ./src/environments/environment.prod.ts && node ./node_modules/@angular/cli/bin/ng -v",
     "start": "node app.js"
   },
   "engines": {

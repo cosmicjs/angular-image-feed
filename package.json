@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "node app.js"
+    "start": "node prepare.js && ng build --prod && node app.js"
   },
   "engines": {
     "node": "6.9.4"

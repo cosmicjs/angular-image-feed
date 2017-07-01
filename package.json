@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall": "npm install @angular/cli@1.1.3",
-    "postinstall": "rm .angular-cli.json && node prepare.js  && cat ./src/environments/environment.prod.ts && ./node_modules/@angular/cli/bin/ng build --prod",
+    "preinstall": "npm install -g @angular/cli@1.1.3",
+    "postinstall": "rm .angular-cli.json && node prepare.js  && cat ./src/environments/environment.prod.ts && ng build --prod",
     "start": "node app.js"
   },
   "engines": {

@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "node prepare.js && ./node_modules/@angular/cli/bin/ng build --prod",
+    "postinstall": "node prepare.js && cat ./src/environments/environment.prod.ts && ./node_modules/@angular/cli/bin/ng build --prod",
     "start": "node app.js"
   },
   "engines": {

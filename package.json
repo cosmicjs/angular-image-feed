@@ -12,7 +12,8 @@
     "start": "node app.js"
   },
   "engines": {
-    "node": "6.9.4"
+    "node": "6.9.4",
+    "npm": "4.2.x"
   },
   "private": true,
   "dependencies": {

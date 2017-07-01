@@ -1,20 +1,20 @@
-<div>
-    <div class="row" *ngIf="!uploading">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Title..." (input)="title = $event.target.value" [value]="title"/>
+<div class="picture-upload">
+    <div class="ui form" [ngClass]="{ 'active dimmer': uploading }">
+        <div class="ui grid" *ngIf="!uploading">
+            <div class="five wide column">
+                <div class="field">
+                    <input type="text" placeholder="Title..." (input)="title = $event.target.value" [value]="title"/>
+                </div>
+            </div>
+            <div class="six wide column">
+                <div class="field">
+                    <input type="file" (change)="onFileChange($event)"/>
+                </div>
+            </div>
+            <div class="five wide column">
+                <button class="ui primary button fluid" (click)="upload()">Upload photo</button>
             </div>
         </div>
-        <div class="col-sm-4">
-            <input type="file" (change)="onFileChange($event)"/>
-        </div>
-        <div class="col-sm-4">
-            <button class="btn btn-primary btn-block" (click)="upload()">Upload photo</button>
-        </div>
-    </div>
-    <div *ngIf="uploading" class="text-center">
-        Upload is in progress
-        <br>
-        <br>
+        <div *ngIf="uploading" class="ui text loader">Upload is in progress</div>
     </div>
 </div>

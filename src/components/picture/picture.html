@@ -1,6 +1,8 @@
-<div class="panel panel-default">
-  <div class="panel-heading">{{ picture.title }}</div>
-  <div class="panel-body text-center">
-    <img [src]="picture.metafield.picture.url" alt="" class="img-responsive">
+<div class="ui card picture-item">
+  <div class="image">
+    <img class="ui fluid image" [src]="picture.metafield.picture.url" alt="{{ picture.title }}">
+  </div>
+  <div class="content">
+    <div class="description">{{ picture.title }}</div>
   </div>
 </div>

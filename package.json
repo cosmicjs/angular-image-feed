@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "npm install @angular/cli@1.1.3 && node prepare.js",
+    "prestart": "npm ./node_modules/@angular/cli/bin/ng -v",
     "start": "node app.js"
   },
   "engines": {

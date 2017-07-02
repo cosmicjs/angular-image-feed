@@ -1,5 +1,5 @@
 #!/bin/bash
-npm install typescript@2.3.3
+npm install -g typescript@2.3.4
 npm install @angular/cli@1.1.3
 node prepare.js
 rm .angular-cli.json

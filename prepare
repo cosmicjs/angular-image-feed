@@ -1,5 +1,4 @@
 #!/bin/bash
 node prepare.js
-rm .angular-cli.json
 tsc -v
 ng build --prod

@@ -1,4 +1,5 @@
 #!/bin/bash
 node prepare.js
 npm install -g typescript
+rm .angular-cli.json
 ./node_modules/@angular/cli/bin/ng build --prod

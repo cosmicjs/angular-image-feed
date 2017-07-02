@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "./prepare",
     "start": "node app.js"
   },
   "engines": {

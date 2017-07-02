@@ -3,4 +3,5 @@ npm install -g @angular/cli@1.1.3 typescript@2.3.4
 node prepare.js
 tsc -v
 rm .angular-cli.json
-ng build --prod
+npm install typescript@2.3.4
+./node_modules/@angular/cli/bin/ng build --prod

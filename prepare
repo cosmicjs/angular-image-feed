@@ -1,4 +1,3 @@
 #!/bin/bash
 node prepare.js
-tsc -v
 ./node_modules/@angular/cli/bin/ng build --prod

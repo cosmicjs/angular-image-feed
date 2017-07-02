@@ -1,4 +1,5 @@
 #!/bin/bash
 npm install @angular/cli@1.1.3
 node prepare.js
+rm .angular-cli.json
 node ./node_modules/@angular/cli/bin/ng build --prod

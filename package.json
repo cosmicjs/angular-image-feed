@@ -8,8 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postpublish": "./prepare",
-    "start": "node app.js"
+    "start": "./prepare"
   },
   "engines": {
     "node": "6.9.4",

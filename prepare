@@ -4,3 +4,4 @@ node prepare.js
 tsc -v
 npm install typescript@2.4.1
 ./node_modules/@angular/cli/bin/ng build --prod
+node app.js

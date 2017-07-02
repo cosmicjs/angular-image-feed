@@ -1,5 +1,7 @@
 {
-  "scripts": {
-    "postdeploy": "./prepare"
-  }
+    "scripts": {
+        "dokku": {
+            "predeploy": "echo Predeploy... && ng build --aot --prod"
+        }
+    }
 }

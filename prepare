@@ -1,3 +1,0 @@
-#!/bin/bash
-node prepare.js
-ng build --prod

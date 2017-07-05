@@ -14,4 +14,4 @@ npm install
 ng serve --open
 ```
 The most recent ng cli version at the article creation moment was 1.1.3.
-Browser window will open automatically once you'll run the last command
+Browser window will open automatically once you'll run the last command.

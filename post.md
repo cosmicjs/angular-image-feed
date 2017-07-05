@@ -27,7 +27,7 @@ First of all, you have to be sure you have node > 6.x installed, than run the fo
 
 ```bash
 npm install -g @angular/cli
-git clone git@bitbucket.org:IvanTheCrazy/cosmic-angular.git
+git clone https://github.com/cosmicjs/angular-image-feed
 cd cosmic-angular
 npm install
 ng serve --open

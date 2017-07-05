@@ -1,6 +1,6 @@
 # Angular Image Feed
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+![Angular Image Feed](https://cosmicjs.com/uploads/1c8f53e0-61cb-11e7-9d28-7b65c66a2644-angular-image-feed.png)
+An Angular JS image feed that includes upload ability, caption creation and infinite scroll.
 
 # Running locally
 

@@ -1,5 +1,5 @@
 # Angular Image Feed
-![Angular Image Feed](https://cosmicjs.com/uploads/1c8f53e0-61cb-11e7-9d28-7b65c66a2644-angular-image-feed.png)
+![Angular Image Feed](https://cosmicjs.com/uploads/83a87480-61cb-11e7-b6e6-cb38cc92844f-angular-image-feed.jpg)
 An Angular JS image feed that includes upload ability, caption creation and infinite scroll.
 
 # Running locally

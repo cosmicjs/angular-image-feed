@@ -9,7 +9,7 @@ First of all, you have to be sure you have node >= 6.x installed and npm >= 4.0,
 ```bash
 npm install -g @angular/cli
 git clone https://github.com/cosmicjs/angular-image-feed
-cd cosmic-angular
+cd angular-image-feed
 npm install
 ng serve --open
 ```
